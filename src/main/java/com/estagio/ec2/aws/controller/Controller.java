@@ -18,4 +18,9 @@ public class Controller {
         MessageBuild messageBuild = new MessageBuild(text);
         return ResponseEntity.status(HttpStatus.OK).body(messageBuild);
     }
+
+    @GetMapping(value = "hello")
+    public ResponseEntity<String> Hello(){
+        return ResponseEntity.status(HttpStatus.OK).body("Hello World :D");
+    }
 }
